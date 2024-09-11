@@ -9,7 +9,7 @@ const overlay = document.getElementById('overlay');
 
 async function loadAllPokemons() {
     try {
-        const response = await fetch('https://pokeapi.co/api/v2/pokemon?limit=151');
+        const response = await fetch('https://pokeapi.co/api/v2/pokemon?limit=1025');
         const data = await response.json();
         const pokemons = await Promise.all(data.results.map(async (pokemon) => {
             const res = await fetch(pokemon.url);
